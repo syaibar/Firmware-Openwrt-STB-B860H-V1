@@ -1,0 +1,16 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+bash /etc/custom_service/start_service.sh
+sleep 5 && /usr/sbin/bled -r
+# Auto Sinkron Jam
+/usr/bin/jam.sh jam.bmkg.go.id
+
+# Auto Mount HDD
+ntfs-3g /dev/sda2 /mnt/sda2 -o big_writes
+ntfs-3g /dev/sdb2 /mnt/sdb2 -o big_writes
+ntfs-3g /dev/sdc2 /mnt/sdc2 -o big_writes
+
+# Auto Start Aria2
+aria2c --conf-path=/etc/aria2/aria2.conf --check-certificate=false --daemon=true --enable-rpc --rpc-allow-origin-all
+exit 0

@@ -1,0 +1,9 @@
+https://github.com/vitoharhari/sync-date-openwrt-with-bug
+
+opkg update && opkg install curl wget
+
+wget --no-check-certificate "https://raw.githubusercontent.com/vitoharhari/sync-date-openwrt-with-bug/main/jam.sh" -O /usr/bin/jam.sh && chmod +x /usr/bin/jam.sh
+
+Atur di System dan ubah ke Asia/Jakarta
+
+/usr/bin/jam.sh jam.bmkg.go.id

@@ -1,0 +1,44 @@
+1. Jalankan via terminal: 
+opkg update && opkg install aria2 webui-aria2 nano
+
+ 2. jalankan via terminal
+mkdir -p /etc/aria2
+touch /etc/aria2/aria2.conf
+touch /etc/aria2/aria2.log
+touch /etc/aria2/session.txt
+
+ 3. Jalankan via terminal: 
+nano /etc/aria2/aria2.conf
+
+  4. Copy dibawah ini dan paste ke terminal
+dir=/mnt/usb/aria2-webui
+max-connection-per-server=2
+enable-rpc=true
+rpc-listen-port=6800
+rpc-listen-all=true
+check-integrity=false
+file-allocation=none
+log=/etc/aria2/aria2.log
+console-log-level=warn
+check-certificate=false
+rpc-save-upload-metadata=true
+continue=true
+input-file=/etc/aria2/session.txt
+save-session=/etc/aria2/session.txt
+save-session-interval=30
+
+ 5. Kemudian simpan dengan menekan Ctrl+X lalu tekan Y dilanjut dengan Enter
+ 
+ 6. Jalankan via terminal:
+nano /etc/rc.local
+
+ 6. Tambahkan baris konfigurasi dibawah ini sebelum baris exit 0
+aria2c --conf-path=/etc/aria2/aria2.conf --check-certificate=false --daemon=true --enable-rpc --rpc-allow-origin-all
+ 
+ 7. Kemudian simpan dengan menekan Ctrl+X lalu tekan Y dilanjut dengan Enter
+ 8. Install libopenssl-legacy
+
+opkg install libopenssl-legacy
+
+ 9. WebUI Aria2 dapat diakses melalui web browser:
+http://IP-Router/webui-aria2 contoh http://192.168.1.1/webui-aria2

@@ -1,0 +1,23 @@
+https://vantc.net/setup-file-sharing-smb-on-openwrt-with-samba4.html
+
+
+1. Install Samba4
+
+opkg update && opkg install luci-app-samba4
+
+Afer that, configure it with the the Web-UI. The Samba4 service should be automatically restart. If it doesn’t work, you can use
+
+/etc/init.d/samba4 restart
+
+2. Configure Samba Users
+The username is stored in /etc/passwd file. To modify it, use VI or Nano
+
+nano /etc/passwd
+
+After that, insert this example line to end of the file. It will create a new username with the below information:
+
+admin:*:1000:65534:admin:/var:/bin/false
+
+smbpasswd -a admin
+
+service samba4 restart

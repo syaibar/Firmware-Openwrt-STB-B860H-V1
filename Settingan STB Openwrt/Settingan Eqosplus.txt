@@ -1,0 +1,119 @@
+# Lokasi /etc/config/eqosplus
+
+
+config eqosplus
+	option enabled '0'
+	option download '1000'
+	option upload '30'
+	option ifname '1'
+	
+config device
+	option enable '0'
+	option download '0.05'
+	option upload '0.05'
+	option timestart '22:00'
+	option timeend '23:59'
+	option week '1'
+	option comment 'HP Syaiful Sabtu (22:00-23:59)'
+	option mac 'E0:1F:88:51:77:36'
+	
+config device
+	option timestart '22:00'
+	option week '0'
+	option download '0.05'
+	option timeend '23:59'
+	option upload '0.05'
+	option enable '0'
+	option comment 'HP Andrian (22:00-23:59)'
+	option mac '192.168.1.115'
+
+config device
+	option mac '192.168.1.115'
+	option timestart '00:00'
+	option timeend '03:00'
+	option week '0'
+	option download '0.05'
+	option upload '0.05'
+	option enable '1'
+	option comment 'HP Andrian (00:00-03:00)'
+
+config device
+	option enable '0'
+	option download '0.05'
+	option upload '0.05'
+	option timestart '14:30'
+	option timeend '15:00'
+	option week '0'
+	option comment 'HP Syaiful'
+	option mac '66:24:E6:C6:AE:81'
+
+config device
+	option enable '0'
+	option download '0.05'
+	option upload '0.05'
+	option timestart '22:00'
+	option timeend '23:59'
+	option week '1'
+	option comment 'HP Andrian Senin (22:00-23:59)'
+	option mac 'E0:1F:88:51:77:36'
+
+config device
+	option enable '0'
+	option download '0.05'
+	option upload '0.05'
+	option timestart '22:00'
+	option timeend '23:59'
+	option week '2'
+	option comment 'HP Andrian Selasa (22:00-23:59)'
+	option mac 'E0:1F:88:51:77:36'
+
+config device
+	option enable '0'
+	option download '0.05'
+	option upload '0.05'
+	option timestart '22:00'
+	option timeend '23:59'
+	option week '3'
+	option comment 'HP Andrian Rabu (22:00-23:59)'
+	option mac 'E0:1F:88:51:77:36'
+
+config device
+	option enable '0'
+	option download '0.05'
+	option upload '0.05'
+	option timestart '22:00'
+	option timeend '23:59'
+	option week '4'
+	option comment 'HP Andrian Kamis (22:00-23:59)'
+	option mac 'E0:1F:88:51:77:36'
+
+config device
+	option enable '0'
+	option download '0.05'
+	option upload '0.05'
+	option timestart '22:00'
+	option timeend '23:59'
+	option week '5'
+	option comment 'HP Andrian Jumat (22:00-23:59)'
+	option mac 'E0:1F:88:51:77:36'
+
+config device
+	option enable '0'
+	option download '0.05'
+	option upload '0.05'
+	option timestart '22:00'
+	option timeend '23:59'
+	option week '6'
+	option comment 'HP Andrian Sabtu (22:00-23:59)'
+	option mac 'E0:1F:88:51:77:36'
+
+
+config device
+	option enable '0'
+	option download '0.05'
+	option upload '0.05'
+	option timestart '22:00'
+	option timeend '23:59'
+	option week '7'
+	option comment 'HP Andrian Minggu (22:00-23:59)'
+
